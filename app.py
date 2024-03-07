@@ -12,9 +12,6 @@ app = Flask(__name__)
 API_URL = os.environ.get('API_URL') #change this to your url from cloud.hanko.io
 AUDIENCE = os.environ.get('AUDIENCE') # change this to the domain you're hosting on, and make sure it matches the URL on cloud.hanko.io
 
-API_URL = "https://eb448bc5-6b9f-4bde-9494-9e755fcad1c5.hanko.io"
-AUDIENCE = "localhost"
-
 # Retrieve the JWKS from the Hanko API
 jwks_url = f"{API_URL}/.well-known/jwks.json"
 jwks_response = requests.get(jwks_url)

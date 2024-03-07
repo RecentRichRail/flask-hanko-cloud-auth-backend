@@ -11,7 +11,6 @@ COPY . /app
 RUN apt-get update
 
 # Install any needed packages specified in requirements.txt
-# RUN pip uninstall jwt
 RUN pip install -y --no-cache-dir -r /app/requirements.txt
 
 # Make port 80 available to the world outside this container

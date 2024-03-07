@@ -1,0 +1,25 @@
+<body>
+    <nav>
+      <a href="#" id="logout-link">Logout</a>
+    </nav>
+  
+    <hanko-profile />
+  
+    <script type="module">
+      import { register } from "https://cdn.jsdelivr.net/npm/@teamhanko/hanko-elements/dist/elements.js";
+  
+      const { hanko } = await register("{{ API_URL }}");
+  
+      document.getElementById("logout-link")
+        .addEventListener("click", (event) => {
+            event.preventDefault();
+            hanko.user.logout();
+        });
+  
+      hanko.onUserLoggedOut(() => {
+          // successfully logged out, redirect to a page in your application
+          document.location.href = "/login";
+      })
+    </script>
+  </body>
+  

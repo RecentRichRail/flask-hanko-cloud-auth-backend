@@ -1,0 +1,15 @@
+<body>
+  <hanko-auth id="authComponent"></hanko-auth>
+
+  <script type="module">
+    import { register } from "https://cdn.jsdelivr.net/npm/@teamhanko/hanko-elements/dist/elements.js";
+
+    await register("{{ API_URL }}");
+
+    const authComponent = document.getElementById("authComponent");
+    authComponent.addEventListener("onAuthFlowCompleted", () => {
+      // successfully logged in, redirect to a page in your application
+      document.location.href = "{{ redirect }}";
+    });
+  </script>
+</body>

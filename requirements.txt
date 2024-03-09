@@ -1,4 +1,4 @@
 flask
 gunicorn
-pyjwt
+pyjwt==2.3.0
 requests

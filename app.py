@@ -9,11 +9,11 @@ from pprint import pprint
 app = Flask(__name__)
 
 # Constants
-# API_URL = os.environ.get('API_URL')  # Change this to your URL from cloud.hanko.io
-# AUDIENCE = os.environ.get('AUDIENCE')  # Change this to the domain you're hosting on, and make sure it matches the URL on cloud.hanko.io
+API_URL = os.environ.get('API_URL')  # Change this to your URL from cloud.hanko.io
+AUDIENCE = os.environ.get('AUDIENCE')  # Change this to the domain you're hosting on, and make sure it matches the URL on cloud.hanko.io
 
-API_URL = "https://eb448bc5-6b9f-4bde-9494-9e755fcad1c5.hanko.io"
-AUDIENCE = "localhost"
+# API_URL = "https://eb448bc5-6b9f-4bde-9494-9e755fcad1c5.hanko.io"
+# AUDIENCE = "localhost"
 
 # Retrieve the JWKS from the Hanko API
 jwks_url = f"{API_URL}/.well-known/jwks.json"
